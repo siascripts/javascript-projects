@@ -1,0 +1,17 @@
+.calculator {
+  display: grid;
+  grid-template-areas:
+    "heading heading heading heading"
+    "result-div result-div result-div result-div"
+    "myarea1 myarea2 myarea3 myarea4" "myarea5 myarea6 myarea7 myarea8"
+    "myarea9 myarea10 myarea11 myarea12" "myarea13 myarea14 myarea15 myarea16"
+    "myarea17 myarea17 myarea18 myarea19";
+  width: 250px;
+  height: 400px;
+  font-size: 40px;
+  border-radius: 10px;
+}
+.result-div {
+  background-color: #d3d3d3;
+  text-align: right;
+}

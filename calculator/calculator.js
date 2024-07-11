@@ -18,44 +18,45 @@ const checkValue = (value) => {
     handleNumber(value);
   } else handleOperator(value);
 
-const handleNumber = (value) => {
-  displayValue = displayValue + value;
-  display.innerText = displayValue;
-  currentValue = currentValue + value;
-};
+  const handleNumber = (value) => {
+    displayValue = displayValue + value;
+    display.innerText = displayValue;
+    currentValue = currentValue + value;
+  };
 
-const handleOperator = (op) => {
-  operator = "op";
-  if (firstOperation) {
-    result = parseInt(currentValue);
-    display.innerText = result;
-    console.log("result 55", result);
-    firstOperation = false;
-    currentValue = displayValue = "";
-  } else {
-    switch (op) {
-      case "+":
-        result = result + parseInt(currentValue);
-        display.innerText = result;
-        currentValue = displayValue = "";
-        break;
-      case "-":
-        if (currentValue) {
-          result = result - parseInt(currentValue);
+  const handleOperator = (op) => {
+    operator = "op";
+    if (firstOperation) {
+      result = parseInt(currentValue);
+      display.innerText = result;
+      console.log("result 55", result);
+      firstOperation = false;
+      currentValue = displayValue = "";
+    } else {
+      switch (op) {
+        case "+":
+          result = result + parseInt(currentValue);
           display.innerText = result;
           currentValue = displayValue = "";
-        }
-        break;
-      case "/":
-        result = result / parseInt(currentValue);
-        display.innerText = result;
-        currentValue = displayValue = "";
-        break;
-      case "*":
-        result = result * parseInt(currentValue);
-        display.innerText = result;
-        currentValue = displayValue = "";
-        break;
+          break;
+        case "-":
+          if (currentValue) {
+            result = result - parseInt(currentValue);
+            display.innerText = result;
+            currentValue = displayValue = "";
+          }
+          break;
+        case "/":
+          result = result / parseInt(currentValue);
+          display.innerText = result;
+          currentValue = displayValue = "";
+          break;
+        case "*":
+          result = result * parseInt(currentValue);
+          display.innerText = result;
+          currentValue = displayValue = "";
+          break;
+      }
     }
-  }
+  };
 };

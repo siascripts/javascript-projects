@@ -8,14 +8,19 @@
   </head>
   <body class="container">
     <div>
+      <div style="display: flex; width: 60px; justify-content: space-between">
+        <span class="cir red-cir"></span>
+        <span class="cir yellow-cir minimize-btn" class="cir yellow-cir"></span>
+        <span class="cir green-cir"></span>
+      </div>
       <div class="calculator">
-        <div style="grid-area: result-div" class="result-div" id="display">
-          0
+        <div style="grid-area: result-div" class="result-div">
+          <p id="display">0</p>
         </div>
-        <button id="number" class="btn" style="grid-area: myarea1">AC</button>
-        <button id="number" class="btn" style="grid-area: myarea2">+/-</button>
-        <button id="number" class="btn" style="grid-area: myarea3">%</button>
-        <button id="number" class="btn" style="grid-area: myarea4">/</button>
+        <button id="special" class="btn" style="grid-area: myarea1">AC</button>
+        <button id="special" class="btn" style="grid-area: myarea2">+/-</button>
+        <button id="special" class="btn" style="grid-area: myarea3">%</button>
+        <button id="operator" class="btn" style="grid-area: myarea4">/</button>
         <button id="number" class="btn" style="grid-area: myarea5">7</button>
         <button id="number" class="btn" style="grid-area: myarea6">8</button>
         <button id="number" class="btn" style="grid-area: myarea7">9</button>

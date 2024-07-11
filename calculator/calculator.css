@@ -1,17 +1,122 @@
+.container {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  background-color: #222;
+  margin: 0;
+}
+
 .calculator {
   display: grid;
   grid-template-areas:
     "heading heading heading heading"
     "result-div result-div result-div result-div"
-    "myarea1 myarea2 myarea3 myarea4" "myarea5 myarea6 myarea7 myarea8"
-    "myarea9 myarea10 myarea11 myarea12" "myarea13 myarea14 myarea15 myarea16"
+    "myarea1 myarea2 myarea3 myarea4"
+    "myarea5 myarea6 myarea7 myarea8"
+    "myarea9 myarea10 myarea11 myarea12"
+    "myarea13 myarea14 myarea15 myarea16"
     "myarea17 myarea17 myarea18 myarea19";
-  width: 250px;
-  height: 400px;
+  grid-template-columns: repeat(4, 1fr);
   font-size: 40px;
   border-radius: 10px;
+  color: white;
+  gap: 1px;
+  box-sizing: border-box;
 }
+
 .result-div {
-  background-color: #d3d3d3;
+  grid-area: result-div;
+  background-color: #333;
   text-align: right;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 1.5em;
+  opacity: 1;
+}
+
+.flicker {
+  animation: flickerEffect 0.5s;
+}
+
+@keyframes flickerEffect {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.btn {
+  font-size: 1em;
+  color: white; /* Text color */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgb(40, 40, 40);
+}
+
+.btn.operator:active {
+  outline: 2px solid black;
+}
+
+.btn.special {
+  background-color: #666; /* Darker grey for special buttons */
+}
+
+#number {
+  background-color: #717273;
+}
+
+#operator {
+  background-color: #ff9500;
+}
+
+#special {
+  background-color: #424445;
+}
+.btn:active {
+  opacity: 0.1;
+}
+
+.cir {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  top: 18px;
+  left: 12px;
+}
+.red-cir {
+  background-color: red;
+}
+.yellow-cir {
+  background-color: yellow;
+}
+.green-cir {
+  background-color: green;
+}
+
+.calculator {
+  /* Keep previous styles */
+  /* position: fixed;
+  top: 10px;
+  left: 20px;
+  bottom: -500px;
+  right: 20px;  */
+}
+
+.minimized {
+  transform: scale(0) translate(50%, 50%);
+  bottom: -500px;
+  right: 20px; /* Adjust as needed */
+
+  transition: transform 1s ease-in-out, bottom 4s ease-out, right 4s ease-out;
 }

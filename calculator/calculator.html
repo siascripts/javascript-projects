@@ -6,38 +6,87 @@
     <title>Document</title>
     <link rel="stylesheet" href="calculator.css" />
   </head>
-  <body class="container">
-    <div>
-      <div style="display: flex; width: 60px; justify-content: space-between">
-        <span class="cir red-cir"></span>
-        <span class="cir yellow-cir minimize-btn" class="cir yellow-cir"></span>
-        <span class="cir green-cir"></span>
-      </div>
-      <div class="calculator">
-        <div style="grid-area: result-div" class="result-div">
-          <p id="display">0</p>
+  <body>
+    <div style="height: 100vh">
+      <div class="container active">
+        <div>
+          <div class="control-buttons">
+            <span class="cir red-cir"></span>
+            <span
+              class="cir yellow-cir"
+              class="cir yellow-cir"
+              id="minimized"
+            ></span>
+            <span class="cir green-cir"></span>
+          </div>
+          <div class="calculator">
+            <div style="grid-area: result-div" class="result-div">
+              <p id="display">0</p>
+            </div>
+            <button id="special" class="btn" style="grid-area: myarea1">
+              AC
+            </button>
+            <button id="special" class="btn" style="grid-area: myarea2">
+              +/-
+            </button>
+            <button id="special" class="btn" style="grid-area: myarea3">
+              %
+            </button>
+            <button id="operator" class="btn" style="grid-area: myarea4">
+              /
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea5">
+              7
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea6">
+              8
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea7">
+              9
+            </button>
+            <button id="operator" class="btn" style="grid-area: myarea8">
+              *
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea9">
+              4
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea10">
+              5
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea11">
+              6
+            </button>
+            <button id="operator" class="btn" style="grid-area: myarea12">
+              -
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea13">
+              1
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea14">
+              2
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea15">
+              3
+            </button>
+            <button id="operator" class="btn" style="grid-area: myarea16">
+              +
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea17">
+              0
+            </button>
+            <button id="number" class="btn" style="grid-area: myarea18">
+              .
+            </button>
+            <button id="operator" class="btn" style="grid-area: myarea19">
+              =
+            </button>
+          </div>
         </div>
-        <button id="special" class="btn" style="grid-area: myarea1">AC</button>
-        <button id="special" class="btn" style="grid-area: myarea2">+/-</button>
-        <button id="special" class="btn" style="grid-area: myarea3">%</button>
-        <button id="operator" class="btn" style="grid-area: myarea4">/</button>
-        <button id="number" class="btn" style="grid-area: myarea5">7</button>
-        <button id="number" class="btn" style="grid-area: myarea6">8</button>
-        <button id="number" class="btn" style="grid-area: myarea7">9</button>
-        <button id="operator" class="btn" style="grid-area: myarea8">*</button>
-        <button id="number" class="btn" style="grid-area: myarea9">4</button>
-        <button id="number" class="btn" style="grid-area: myarea10">5</button>
-        <button id="number" class="btn" style="grid-area: myarea11">6</button>
-        <button id="operator" class="btn" style="grid-area: myarea12">-</button>
-        <button id="number" class="btn" style="grid-area: myarea13">1</button>
-        <button id="number" class="btn" style="grid-area: myarea14">2</button>
-        <button id="number" class="btn" style="grid-area: myarea15">3</button>
-        <button id="operator" class="btn" style="grid-area: myarea16">+</button>
-        <button id="number" class="btn" style="grid-area: myarea17">0</button>
-        <button id="number" class="btn" style="grid-area: myarea18">.</button>
-        <button id="operator" class="btn" style="grid-area: myarea19">=</button>
       </div>
     </div>
+    <button id="calculator-toggle" class="calculator-toggle">
+      <img src="/calculator/calculator_icon.png" alt="Calculator Toggle" />
+    </button>
   </body>
   <script src="calculator.js"></script>
 </html>

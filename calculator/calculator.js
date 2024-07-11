@@ -118,11 +118,14 @@ const checkValue = (value) => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const minimizeBtn = document.querySelector(".minimize-btn");
-  const windowElement = document.querySelector(".container");
+const calculator = document.querySelector(".container");
+const calculatorToggle = document.getElementById("calculator-toggle");
+const calculatorMinimize = document.getElementById("minimized");
 
-  minimizeBtn.addEventListener("click", function () {
-    windowElement.classList.add("minimized");
-  });
+calculatorToggle.addEventListener("click", () => {
+  calculator.classList.toggle("active");
+});
+
+calculatorMinimize.addEventListener("click", () => {
+  calculator.classList.toggle("minimized");
 });

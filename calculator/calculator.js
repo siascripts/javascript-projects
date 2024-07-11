@@ -17,7 +17,6 @@ const checkValue = (value) => {
   if (!isNaN(value)) {
     handleNumber(value);
   } else handleOperator(value);
-};
 
 const handleNumber = (value) => {
   displayValue = displayValue + value;

@@ -119,13 +119,15 @@ const checkValue = (value) => {
 };
 
 const calculator = document.querySelector(".container");
-const calculatorToggle = document.getElementById("calculator-toggle");
-const calculatorMinimize = document.getElementById("minimized");
+const calculatorToggle = document.querySelector(".calculator-toggle");
+const calculatorMinimize = document.querySelector(".yellow-cir");
 
 calculatorToggle.addEventListener("click", () => {
   calculator.classList.toggle("active");
+  calculator.classList.remove("minimized");
 });
 
 calculatorMinimize.addEventListener("click", () => {
   calculator.classList.toggle("minimized");
+  calculator.classList.remove("active");
 });

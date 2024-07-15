@@ -35,24 +35,26 @@ button2.setAttribute(
 
 //Add Event Listener and Functions
 const operation = (op) => {
-  const numElement = document.getElementById("number");
-  let intNum = parseInt(numElement.innerText);
-  const operator = op;
+  return function doOperation() {
+    const numElement = document.getElementById("number");
+    let intNum = parseInt(numElement.innerText);
+    const operator = op;
 
-  if (operator === "+") {
-    const result = ++intNum;
-    numElement.innerHTML = result;
-  } else if (operator === "-" && intNum > 0) {
-    const result = --intNum;
-    numElement.innerHTML = result;
-  }
+    if (operator === "+") {
+      const result = ++intNum;
+      numElement.innerHTML = result;
+    } else if (operator === "-" && intNum > 0) {
+      const result = --intNum;
+      numElement.innerHTML = result;
+    }
 
-  // Enable or disable the minus button based on the counter value
-  if (intNum === 0) {
-    button1.disabled = true;
-  } else {
-    button1.disabled = false;
-  }
+    // Enable or disable the minus button based on the counter value
+    if (intNum === 0) {
+      button1.disabled = true;
+    } else {
+      button1.disabled = false;
+    }
+  };
 };
 
 button1.disabled = true;
@@ -71,9 +73,12 @@ button1.disabled = true;
 //   }
 // };
 
-button1.addEventListener("click", () => {
-  operation("-");
-});
-button2.addEventListener("click", function () {
-  operation("+");
-});
+// button1.addEventListener("click", () => {
+//   operation("-");
+// });
+// button2.addEventListener("click", function () {
+//   operation("+");
+// });
+
+button1.addEventListener("click", operation("-"));
+button2.addEventListener("click", operation("+"));
